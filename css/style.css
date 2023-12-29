@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --dark-cyan: #3c8067;
+    --cream:  #f2ebe3;
+    --very-dark-blue:  #1c232b;
+    dark-grayish-blue:  #6c7289;
+    white:  #ffffff;
+}
+
+.fraunces{
+    font-family: 'Fraunces', serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2ebe3;
+    color: #6c7289;
+}
+
+.container{
+    width: 600px;
+    height: 450px;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .image{
+    width: 50%;
+}
+
+.container .image img{
+    width: 100%;
+    display: block;
+}
+
+.container .image img.mobile{
+    display: none;
+}
+
+.container .card{
+    width: 50%;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .card h6{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+.container .card h1{
+    color: #1c232b;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 30px;
+}
+
+.container .card p{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+.container .card h2{
+    font-size: 32px;
+    line-height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.container .card h2 span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.container .card a{
+    display: flex;
+    line-height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    background-color: #3c8067;
+    border-radius: 8px;
+    margin-top: 26px;
+    transition-duration: 200ms;
+}
+
+.container .card a:hover{
+    background-color: #1A4031;
+}
+
+.container .card a img{
+    display: block;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        height: auto;
+        padding: 28px 16px;
+    }
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .image{
+        width: 100%;
+    }
+
+    .container .image img.desktop{
+        display: none;
+    }
+
+    .container .image img.mobile{
+        display: block;
+    }
+
+    .container .card{
+        width: 100%;
+        padding: 25px;
+    }
+}
